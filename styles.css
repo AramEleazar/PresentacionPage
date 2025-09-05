@@ -1,3 +1,18 @@
-h1 {
-    color: brown;
+div {
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: 
+        auto 1fr auto;
+}
+div h1{
+    background-color: rgb(141, 148, 153);
+
+}
+div h2{
+    background-color: rgb(154, 171, 171);
+
+}
+div h3{
+    background-color: rgb(137, 118, 118);
+
 }
