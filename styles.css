@@ -1,18 +1,111 @@
-div {
-    display: grid;
-    min-height: 100dvh;
-    grid-template-rows: 
-        auto 1fr auto;
+:root {
+    --color-principal: #6a8190;
+    --color-texto: #333;
+    --color-fondo: #f4f4f4;
+    --color-tarjeta: #ffffff;
+    --color-borde: #ddd;
 }
-div h1{
-    background-color: rgb(141, 148, 153);
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
 }
-div h2{
-    background-color: rgb(154, 171, 171);
 
+header {
+    background-color: var(--color-principal);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
 }
-div h3{
-    background-color: rgb(137, 118, 118);
 
+.perfil img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+}
+
+h1, h2 {
+    color: var(--color-texto);
+    margin-top: 0;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+section {
+    background-color: var(--color-tarjeta);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.etiquetas span {
+    display: inline-block;
+    background-color: var(--color-borde);
+    color: var(--color-texto);
+    padding: 0.4rem 0.8rem;
+    margin: 0.2rem;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.proyecto {
+    border-bottom: 1px solid var(--color-borde);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.proyecto:last-child {
+    border-bottom: none;
+}
+
+.proyecto a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--color-principal);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid var(--color-borde);
+    background-color: var(--color-tarjeta);
+}
+
+footer a {
+    color: var(--color-principal);
+    text-decoration: none;
+}
+
+
+@media (min-width: 768px) {
+    body {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    #objetivo {
+        grid-column: 1 / 3;
+    }
 }
